@@ -6,12 +6,12 @@ import { useCart } from "@/context/CartContext";
 import { useAuth } from "@/context/AuthContext";
 import { cn } from "@/lib/utils";
 
-const NAV = [
-  { to: "/shop", label: "Shop" },
-  { to: "/shop?category=mens-tops", label: "Men" },
-  { to: "/shop?category=womens-tops", label: "Women" },
-  { to: "/shop?category=accessories", label: "Accessories" },
-  { to: "/shop?category=sale", label: "Sale" },
+const NAV: { label: string; category?: string }[] = [
+  { label: "Shop" },
+  { label: "Men", category: "mens-tops" },
+  { label: "Women", category: "womens-tops" },
+  { label: "Accessories", category: "accessories" },
+  { label: "Sale", category: "sale" },
 ];
 
 export function Header() {
