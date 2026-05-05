@@ -59,10 +59,10 @@ export function Header() {
         <nav className="hidden md:flex items-center gap-7 text-sm text-foreground/75 ml-6">
           {NAV.map((n) => (
             <Link
-              key={n.to}
-              to={n.to}
+              key={n.label}
+              to="/shop"
+              search={n.category ? { category: n.category } : {}}
               className="relative hover:text-foreground transition-colors"
-              activeOptions={{ exact: false }}
             >
               {n.label}
             </Link>
