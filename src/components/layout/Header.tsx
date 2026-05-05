@@ -113,7 +113,12 @@ export function Header() {
           >
             <nav className="flex flex-col p-4 gap-3">
               {NAV.map((n) => (
-                <Link key={n.to} to={n.to} className="py-2 text-foreground/80 hover:text-foreground">
+                <Link
+                  key={n.label}
+                  to="/shop"
+                  search={n.category ? { category: n.category } : {}}
+                  className="py-2 text-foreground/80 hover:text-foreground"
+                >
                   {n.label}
                 </Link>
               ))}
